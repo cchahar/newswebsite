@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Good News Only</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class ="header" id ="myHeader">
+
+<ul class="newsline">
+<li style="display:inline-block;">
+<img src="drop.png" height = "100" width ="100" ></li>
+ <li style="display:inline-block;"><h1> Good News Only </h1></li></ul>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="about.html">About</a>
+  <a href="submit.html">Submit a Story</a>
+  </div>
+<span class="spanright" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+</header>
+<main class="content">
+<section class="image"> <div class="container"> 
+
+<p id="newsbite"> 2022 in review : A year of resilience and hope, as told through the top good news stories.</p> 
+
+<a href="https://www.youtube.com/watch?v=lN5Cus4VTDo" target="_blank"> 
+     <div class="newsbtn"> PLAY&nbsp;<span style='font-size:20px;'>&#9658;</span>
+     </div> 
+</a> 
+<a href="submit.html"> 
+<div id="cf">        
+	<img src="fifa.png" width="400px" height="300px" class=bottom>
+	<img src="tokyo.png" width="400px" height="300px" class=top>
+</div>
+</a>
+
+</div>
+
+</section>
+
+
+
+<div class="row">
+  <div class="column">
+    <a href="https://www.youtube.com/watch?v=W-2WiqOtlqg"><img src="cutlery.jpg"  style="width:90%;" height="150">
+<div class="textbox"> Edible Cutlery </a> </div>
+  </div>
+  <div class="column">
+   <a href="https://www.youtube.com/watch?v=FOpTV0Or7z0"> <img src="sports.jpg"  style="width:90%" height="150">
+<div class="textbox">Sports News </a> </div>
+  </div>
+  <div class="column">
+   <a href="https://www.youtube.com/watch?v=1W0xf_6hBHY"> <img src="assistive_tech.jpg" style="width:90%" height ="150">
+<div class="textbox">Assistive Tech </a> </div>
+
+  </div>
+</div>
+
+<h2>Blog Articles </h2>
+<div class="row">
+  <div class="column">
+    <a href="chickenblog.html"><img src="chicken.jpg"  style="width:90%;" height="150">
+<div class="textbox">AI & Farm Chickens  </a> </div>
+  </div>
+  <div class="column">
+   <a href="https://www.youtube.com/watch?v=FOpTV0Or7z0"> <img src="kindness.jpeg"  style="width:90%" height="150">
+<div class="textbox">Acts of Kindness </a> </div>
+  </div>
+  <div class="column">
+   <a href="https://www.youtube.com/watch?v=1W0xf_6hBHY"> <img src="physiotherapy.jpg" style="width:90%" height ="150">
+<div class="textbox">Fitness Training  </a> </div>
+
+  </div>
+</div>
+</main>
+<footer>
+<h3>SITEMAP <h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href= "about.html">About Us</a></li>
+<li><a href="submit.html">Submit Your Story</a></li>
+<li>News
+<ul>
+	<li><a href="#">Sports News </a></li>
+	<li><a href="#">Technology News </a></li>
+	<li><a href="#">Contact Us</a></li>
+	<li><a href="#">Subscribe</a></li>
+</ul> </li>
+
+
+<li><a href="terms.html">Terms and Conditions</a></li>
+</ul>
+
+</footer>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+	
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>

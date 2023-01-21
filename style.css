@@ -1,0 +1,253 @@
+*{margin:0px;}
+
+
+@font-face {
+font-family: "Moon2.0";
+src: url("Moon2.0-Regular.otf") format("opentype");
+
+}
+@font-face {
+font-family: "Moon2.0Bold";
+src: url("Moon2.0-Bold.otf") format("opentype");
+}
+@font-face {
+font-family: "Moon2.0Light";
+src: url("Moon2.0-Light.otf") format("opentype");
+
+}
+
+body 
+{background-color:black;
+color:black;
+font-family: 'Moon2.0', Arial, sans-serif;}
+
+
+
+.image{ height:700px;width:100%;background-image:url(background.jpg);background-repeat: no-repeat;background-size:cover; margin:0;}
+
+
+
+.container{
+position:relative;
+height:40%;width:100%;
+}
+#cf {
+  position:absolute;
+  right:40%;
+  bottom:15%;
+}
+#cf img {                                            
+  position:absolute;
+    transition: opacity 1s ease-in-out;
+}
+#cf img.top:hover {
+  opacity:0;
+}
+
+#newsbite{
+position:absolute;
+left:40px;
+top:100px;
+width:50%;
+margin:2px;
+word-break: break-all;
+font-size: 50px;
+font-family:'Moon2.0Bold', Arial, sans-serif;
+
+}
+
+
+
+#newsbite::before { 
+content:''; 
+display:block; 
+height:5px; 
+
+background-color:#07F585; 
+border: 0px black solid;
+position:absolute; 
+bottom:-2px; 
+width:0%; 
+transition:all ease-in-out 500ms; 
+}
+#newsbite:hover::before
+ { width:100%; 
+
+  }
+#newsbite:hover{ background: rgba(0,5,8, 0.2); font-style:italic; }
+
+.newsline{list-style:none; }
+.newsbtn
+{height:20px;
+width:70px;
+background-color:lightgray;
+border:black 1px solid;
+border-radius:15%;
+text-align:center;
+padding:15px;
+position:absolute;
+left:50px;
+top:350px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+ height:105px;
+  color:  #0753F5;
+/*background: rgba(0,5,8, 0.2); */
+
+}
+
+
+.content {
+  padding: 0px;
+}
+.spanright{position: fixed;right:40px;top:0px;}
+
+.sticky {
+  position: fixed;
+  top: 0;
+background: rgba(0,5,8, 0.2);
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 10px;
+}
+
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 5px;
+margin:5px;
+position:relative;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.textbox{position:absolute;
+bottom:10px;
+left:10px;}
+
+.textbox a{ color:white; text-decoration:none;}
+
+.column img:hover, .textbox a:hover{
+opacity: 0.6;
+}
+
+article{
+
+text-align:left;
+font-size:16px;
+color:gray;
+
+margin:50px;
+padding:50px;
+
+}
+
+
+footer{
+
+background:gray;
+padding:10px;
+}
+footer a { text-decoration:none;
+color:black;}
+
+.wrapper {transform-translate(-50%, -50%);
+max-width:450px;width:100%;
+background-color:mediumaquamarine;
+align:center;padding:40px;
+border-radius:5px;margin:10%;margin-left:15%;}
+
+.wrapper h2 
+{text-align:center;margin-bottom:20px;
+text-transform:uppercase;
+letter-spacing:3px;color:blue;}
+
+.wrapper .inputfield
+ {margin-bottom:10px;}
+
+ .wrapper .inputfield input[type=text], .wrapper textarea 
+{border:3px solid mediumspringgreen;width:100%;padding:10px;}
+ .wrapper textarea
+ {resize:none;height:200px;}
+
+.wrapper .btn input[type=submit]
+ {border:0px;margin-top:15px;
+ padding:10px;text-align:center;
+width:100%;
+background-color:lightgray;
+color:black;
+text-transform:uppercase;
+letter-spacing:5px;
+font-weight:bold;
+border-radius:25px;
+cursor:pointer;}
+
+ #errormessage { margin-bottom:20px; 
+background:#fe8b8e; 
+padding:0px; text-align:center; 
+font-size:14px; 
+transition: all 0.5s ease; }
+
+
+
+
+@media screen and (max-height: 500px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+.column { width: 100%;}
+.image {  width: 100%;
+  max-width: 400px;
+  height: auto;}
+
+}

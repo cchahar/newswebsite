@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Good News Only</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="favicon.png" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class ="header" id ="myHeader"><ul class="newsline"><li style="display:inline-block;"><img src="drop.png" height = "100" width ="100" ></li> <li style="display:inline-block;"><h1> Good News Only </h1></li></ul>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="submit.html">Submit a Story</a>
+  </div>
+<span class="spanright" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
+</header>
+
+<main class="content">
+ <div class="wrapper">
+	 	<h2>Submit your story</h2>
+
+ <form id="myform" onsubmit="return validate();" method="post"action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf-sjpnHeelpGZ1yiOn-2BihH4EhVbTNTYzkNFijAbFiwgJmQ/formResponse">
+	 		 <div class="inputfield">
+	 			<input type="text" placeholder="Name" id="name1" name="entry.431515088">			
+	 		</div>
+	 		<div class="inputfield">
+	 			<input type="text" placeholder="Phone" id="phone1" name="entry.1906149111">	
+	 		</div>
+	 		<div class="inputfield">
+	 			<input type="text" placeholder="Email" id="email1" name="entry.345750467">	
+	 		</div>
+	 		<div class="inputfield">
+				<textarea placeholder="Your Story" id="message1" name="entry.1997701730"></textarea> 
+	 		</div>
+	 		<div class="btn">
+	 			<input type="submit">
+	 		</div>
+	 	<div id="errormessage"></div>	
+	 	</form> </div>
+</main>
+<footer>
+<h3>SITEMAP <h3>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href= "about.html">About Us</a></li>
+<li><a href="submit.html">Submit Your Story</a></li>
+<li>News
+<ul>
+	<li><a href="#">Sports News </a></li>
+	<li><a href="#">Technology News </a></li>
+	<li><a href="#">Contact Us</a></li>
+	<li><a href="#">Subscribe</a></li>
+</ul> </li>
+
+
+<li><a href="terms.html">Terms and Conditions</a></li>
+</ul>
+</footer>
+
+<script>
+
+	function validate()
+	 	{
+	 		var name1=document.getElementById("name1").value;
+	 		var phone1=document.getElementById("phone1").value;
+	 		var email1=document.getElementById("email1").value;
+	 		var message1=document.getElementById("message1").value;
+	 		if(name1.length<2)
+	 		{
+	 			text="Please enter a valid name.";
+	 			errormessage.innerHTML=text;
+	 			return false;
+	 		}
+	 		if(isNaN(phone1)||phone1.length!=10)
+	 		{
+	 			text="Please enter a valid phone number"
+	 			errormessage.innerHTML=text;
+	 			return false;
+	 		}
+	 	if(email1.length<6||email1.indexOf("@")==-1)
+	 		{
+	 			text="Please enter a valid email address"
+	 			errormessage.innerHTML=text;
+	 			return false;
+	 		}
+	 	if(message1.length<50)
+	    	{
+	   			text="Please enter atleast 50 characters"
+	   			errormessage.innerHTML=text;
+	   			return false;	
+	   		 }
+	    alert("Your form was submitted succesfully. Thank you for your feedback.");
+	    return true;
+	 	}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+	
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
